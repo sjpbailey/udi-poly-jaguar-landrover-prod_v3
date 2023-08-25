@@ -10,7 +10,7 @@
 	"longPoll": "1800",
 	"testMode": false,
 	"logLevel": "INFO",
-	"profile_version": "1.0.2",
+	"profile_version": "1.0.0",
 	"customParams": {
 		"email": "joe@ddd.net",
 		"password": "go with your password", 
@@ -20,7 +20,7 @@
 		{
 			"title": "Land Rover ",
 			"author": "Steve Bailey (sjpbailey)",
-			"version": "1.0.2",
+			"version": "1.0.0",
 			"date": "Aug 15, 2023",
 			"source": "https://github.com/sjpbailey/udi-poly-jaguar-landrover-v3",
 			"license": "https://github.com/sjpbailey/udi-poly-jaguar-landrover-v3/blob/main/LICENSE"
