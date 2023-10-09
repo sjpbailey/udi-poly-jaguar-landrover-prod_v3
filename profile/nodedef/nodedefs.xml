@@ -49,6 +49,10 @@
                     <p id="" editor="LOCK" init="GV10" /> 
                 </cmd>
                 
+                <cmd id="PRIV" > 
+                    <p id="" editor="PRIV" init="GV23" /> 
+                </cmd>
+                
                 <cmd id="TEMP">
                     <p id="" editor="LEVEL" init="GV18" />
                 </cmd>
