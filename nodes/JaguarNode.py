@@ -213,11 +213,11 @@ class JaguarNode(udi_interface.Node):
         temptur = (temptur)
         LOGGER.info(f"RCC Setpoint = {temptur}\n")
         v.set_rcc_target_value(self.pin, (temptur))
-        v.remote_engine_start(self.pin, temptur/10)
+        v.remote_engine_start(self.pin, int(temptur/10))
         LOGGER.info("Starting")
         LOGGER.info(f"Starting Temp = {temptur/10}\n")
-        time.sleep(1)
-        self.start()
+        time.sleep(9)
+        # self.start()
 
     def strt(self, command):
         global temptur
@@ -232,9 +232,10 @@ class JaguarNode(udi_interface.Node):
         c = jlrpy.Connection(self.email, self.password)
         v = c.vehicles[0]
         v.remote_engine_stop(self.pin)
+        time.sleep(1)
         v.preconditioning_stop()
         time.sleep(9)
-        self.start()
+        # self.start()
 
     def poll(self, polltype):
         if 'longPoll' in polltype:
