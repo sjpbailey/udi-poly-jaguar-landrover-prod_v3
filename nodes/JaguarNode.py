@@ -213,7 +213,7 @@ class JaguarNode(udi_interface.Node):
         temptur = (temptur)
         LOGGER.info(f"RCC Setpoint C= {temptur}\n")
         v.set_rcc_target_value(self.pin, (temptur))
-        v.remote_engine_start(self.pin, int(temptur/10))
+        v.remote_engine_start(self.pin, temptur/10)
         LOGGER.info("Starting")
         LOGGER.info(f"Starting Temp F= {temptur/10}\n")
         time.sleep(9)
