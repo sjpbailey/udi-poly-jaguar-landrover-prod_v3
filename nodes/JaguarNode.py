@@ -11,6 +11,7 @@ import logging
 import sys
 import time
 import urllib3
+from nodes import jlrpy
 
 LOGGER = udi_interface.LOGGER
 
