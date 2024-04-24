@@ -1,2 +1,2 @@
-udi-interface==3.0.59
+udi-interface==3.1.0
 jlrpy==1.7.0
