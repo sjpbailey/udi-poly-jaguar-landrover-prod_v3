@@ -5,7 +5,8 @@ MIT License
 Version 1.0.0 Jun 2023
 """
 import udi_interface
-import jlrpy
+# import jlrpy
+import jlrpy as jlrpy
 import logging
 import sys
 import time
