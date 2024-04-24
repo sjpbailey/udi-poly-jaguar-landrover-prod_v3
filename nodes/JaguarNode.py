@@ -205,17 +205,17 @@ class JaguarNode(udi_interface.Node):
         v = c.vehicles[0]
         temptur = float(command.get('value'))
         self.setDriver('GV18', temptur)
-        LOGGER.info(temptur)
+        LOGGER.info(f"Starting Temp Sent={temptur}\n")
         # convert to celsius
         temptur = round(int((temptur - 32) * 5.0/9.0))*10
         LOGGER.info(f"Setpoint = {temptur}\n")
         v.preconditioning_start(temptur)
         temptur = (temptur)
-        LOGGER.info(f"RCC Setpoint = {temptur}\n")
+        LOGGER.info(f"RCC Setpoint C= {temptur}\n")
         v.set_rcc_target_value(self.pin, (temptur))
         v.remote_engine_start(self.pin, int(temptur/10))
         LOGGER.info("Starting")
-        LOGGER.info(f"Starting Temp = {temptur/10}\n")
+        LOGGER.info(f"Starting Temp F= {temptur/10}\n")
         time.sleep(9)
         # self.start()
 
@@ -224,8 +224,8 @@ class JaguarNode(udi_interface.Node):
         self.dim()
         c = jlrpy.Connection(self.email, self.password)
         v = c.vehicles[0]
-        # v.remote_engine_start(self.pin, 'GV18')
-        v.remote_engine_start(self.pin, '18.0')
+        v.remote_engine_start(self.pin, 'GV18')
+        # v.remote_engine_start(self.pin, '18.0')
         time.sleep(1)
         LOGGER.info("Start")
 
